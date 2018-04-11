@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My web page</title>
+</head>
+<body>
+	<h1>My web page</h1>
+	<p>Hello, My name's Sébastien</p>
+	<p>I live in <a href="https://en.wikipedia.org/wiki/Brussels">Brussels</a>.</p>
+
+	<script>
+		// var h = document.head;
+		// console.log(h);
+
+		// var b = document.body;
+		// console.log(b);
+
+		// if(document.body.nodeType === document.ELEMENT_NODE){
+		// 	console.log("Body is an element node ! ");
+		// }else{
+		// 	console.log("Body is a textual node !");
+		// }
+
+		// for (var i = 0; i < document.body.childNodes.length; i++){
+		// 	console.log(document.body.childNodes[i]);
+		// }
+
+		var h1 = document.body.childNodes[1];
+		console.log(h1.parentNode);
+		console.log(document.parentNode)
+	</script>
+	
+</body>
+</html>

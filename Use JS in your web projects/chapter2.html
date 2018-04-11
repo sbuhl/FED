@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Seven wonders of the world</title>
+</head>
+
+<body>
+    <h1>Seven wonders of the world</h1>
+    <a href="http://test.com" target="_blank">Test to select a href from a link</a>
+    <p>Do you know the seven wonders of the world?</p>
+    <div id="content">
+        <h2>Wonders from Antiquity</h2>
+        <p>This list comes to us from ancient times.</p>
+        <ul class="wonders" id="ancient">
+            <li class="exists">Great Pyramid of Giza</li>
+            <li>Hanging Gardens of Babylon</li>
+            <li>Lighthouse of Alexandria</li>
+            <li>Statue of Zeus at Olympia</li>
+            <li>Temple of Artemis at Ephesus</li>
+            <li>Mausoleum at Halicarnassus</li>
+            <li>Colossus of Rhodes</li>
+        </ul>
+        <h2>Modern wonders of the world</h2>
+        <p>This list was decided by vote.</p>
+        <ul class="wonders" id="new">
+            <li class="exists">Petra</li>
+            <li class="exists">Great Wall of China</li>
+            <Li class="exists">Christ the Redeemer</Li>
+            <Li class="exists">Machu Picchu</Li>
+            <li class="exists">Chichen Itza</li>
+            <li class="exists">Colosseum</li>
+            <li class="exists">Taj Mahal</li>
+        </ul>
+    </div>
+
+    <div class="contenu">
+    	<h1>General rules of thumb</h1>
+    	<table>
+    		<thead>
+    			<tr>
+    				<td>Number of items to get</td>
+    				<td>Selection criteria</td>
+    				<td>Method</td>
+    			</tr>
+    		</thead>
+    		<tbody>
+    			<tr>
+    				<td>Many</td>
+    				<td>By tag</td>
+    				<td>getElementsByTagName</td>
+    			</tr>
+    			<tr>
+    				<td>Many</td>
+    				<td>By class</td>
+    				<td>getElementsByClassName</td>
+    			</tr>
+    			<tr>
+    				<td>Many</td>
+    				<td>Not by class or tag</td>
+    				<td>querySelectorAll</td>
+    			</tr>
+    			<tr>
+    				<td>One</td>
+    				<td>ID</td>
+    				<td>getElementById</td>
+    			</tr>
+    			<tr>
+    				<td>Only one (the first)</td>
+    				<td>Not ID</td>
+    				<td>querySelector</td>
+    			</tr>
+    		</tbody>
+    	</table>
+    </div>
+
+    <script>
+    	// var titleElements = document.getElementsByTagName("h2");
+    	// console.log(titleElements[0]);
+
+    	// var wondersElements = document.getElementsByClassName("wonders");
+    	// for(var i = 0; i < wondersElements.length; i++){
+    	// 	console.log(wondersElements[i]);
+    	// }
+
+    	// console.log(document.getElementById("new"));
+
+    	// console.log(document.getElementById("ancient").getElementsByClassName("exists").length);
+
+    	// console.log(document.querySelectorAll("p").length);
+
+    	// console.log(document.querySelectorAll("#content p").length);
+
+    	// console.log(document.querySelectorAll(".exists").length);
+
+    	// console.log(document.querySelectorAll("#ancient > .exists").length);
+
+    	// // Return only the first matching
+    	// console.log(document.querySelector("p"));
+
+    	console.log(document.getElementById("content").innerHTML);
+
+    	console.log(document.querySelector("a").getAttribute("href"));
+
+    	console.log(document.querySelector("ul").id);
+    	console.log(document.querySelector("a").href);
+
+    	if(document.querySelector("a").hasAttribute("target")){
+    		console.log("The first link has a attribute.");
+    	}else{
+    		console.log("The first link doesn't have a target attribute.");
+    	}
+
+    	var classes = document.getElementById("ancient").classList;
+    	console.log(classes.length);
+
+    	if(document.getElementById("ancient").classList.contains("wonders")){
+    		console.log("The element identified by 'ancient' also has the class 'wonders");
+    	}else{
+    		console.log("The element identified by 'ancient' doesn't have the class 'wonders'.");
+    	}
+
+    </script>
+</body>
+
+</html>
