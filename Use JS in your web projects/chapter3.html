@@ -1,21 +1,64 @@
 <!doctype html>
 <html>
+<head>
+    <meta charset="utf-8">
+    <title>Some languages</title>
+</head>
 
-    <head>
-        <meta charset="utf-8">
-        <title>Some languages</title>
-    </head>
-    
-    <body>
-        <h1 class="beginning">Some languages</h1>
-        <div id="content">
-            <ul id="languages">
-                <li id="cpp">C++</li>htm
-                <li id="java">Java</li>
-                <li id="csharp">C#</li>
-                <li id="php">PHP</li>
-            </ul>
-        </div>
-    </body>
+<body>
+    <h1 class="beginning">Some languages</h1>
+    <div id="content">
+        <ul id="languages">
+            <li id="cpp">C++</li>htm
+            <li id="java">Java</li>
+            <li id="csharp">C#</li>
+            <li id="perl">Perl</li>
+            <li id="php">PHP</li>
+        </ul>
+    </div>
+    <script>
+        document.getElementById("languages").innerHTML += '<li id="c">C</li>';
+        document.querySelector('h1').textContent += " for programming";
 
+        document.querySelector("h1").setAttribute("id", "title");
+
+        var titleElement = document.querySelector("h1");
+        titleElement.classList.remove("beginning");
+        titleElement.classList.add("title");
+        console.log(titleElement);
+
+        var pythonElement = document.createElement("li");
+        pythonElement.id = "python";
+        pythonElement.textContent = "Python",
+        document.getElementById("languages").appendChild(pythonElement);
+
+        document.getElementById('languages').insertAdjacentHTML("afterBegin", '<li id="javascript">Javascript</li>');
+
+        var bashElement = document.createElement("li");
+        bashElement.id = "bash";
+        bashElement.textContent = "Bash";
+        document.getElementById("languages").replaceChild(bashElement, document.getElementById("perl"));
+
+        document.getElementById("languages").removeChild(document.getElementById("bash"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
 </html>
