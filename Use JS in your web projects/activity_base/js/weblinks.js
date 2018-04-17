@@ -53,3 +53,12 @@ linkList.forEach(function (link) {
     var linkElement = createLinkElement(link);
     content.appendChild(linkElement);
 });
+
+function addForm(){
+    document.getElementById("addForm").insertAdjacentHTML("beforebegin", '<form id="formElement"><input class="addInput" type="text" placeholder="Your name"><input class="addInput" type="text" placeholder="Link title"><input class="addInput" type="text" placeholder="Link URL"><button id="addLink" onclick="addLink()">Add</button></form>');
+    document.querySelector("body").removeChild(document.getElementById("addForm"));
+}
+
+function addLink(){
+    document.querySelector("body").removeChild(document.getElementById("formElement"));
+}
